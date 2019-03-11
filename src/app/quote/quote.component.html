@@ -1,0 +1,17 @@
+<div class="card" style="width: 100%;margin-top:2%;">
+  <div class="card-body">
+    <h5 class="card-title">{{ quote.content }}</h5>
+  </div>
+  <div class="card-footer">
+    <div *ngIf="editing">
+      <input type="text" class="form-control" [(ngModel)]="editValue"> <br>
+        <a style="cursor: pointer;color: white" (click)="onUpdate()" class="btn btn-xs btn-info">Save</a> | 
+        <a style="cursor: pointer;color: white" (click)="onCancel()" class="btn btn-xs btn-danger">Cancel</a>
+    </div>
+    <div *ngIf="!editing">
+        <a style="cursor: pointer;color: white" (click)="onEdit()" class="btn btn-xs btn-warning">Edit</a> | 
+        <a style="cursor: pointer;color: white" (click)="onDelete()" class="btn btn-xs btn-danger">Delete</a>
+    </div> 
+  </div>
+</div>
+

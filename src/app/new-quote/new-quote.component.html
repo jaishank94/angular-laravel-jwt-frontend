@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+    <div class="col-sm-12">
+        <form style="margin:5%;">
+          <div class="form-group">
+            <label for="content">Quote</label>
+            <input type="text" class="form-control" id="content" name="content" placeholder="Write your quote here..." [(ngModel)]="content">
+          </div>
+          <button class="btn btn-primary" (click)="onSubmit()" type="submit">Submit</button>
+        </form>
+    </div>    
+  </div>
+</div>
